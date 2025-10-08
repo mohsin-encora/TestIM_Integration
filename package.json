@@ -1,0 +1,46 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Hello and welcome to this course on writing API tests with Postman.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "clean": "rimraf dist test-results playwright-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "build": "tsc -p tsconfig.json",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:ci": "playwright test --reporter=line,html,json --retries=2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohsin-encora/TestIM_Integration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/mohsin-encora/TestIM_Integration/issues"
+  },
+  "homepage": "https://github.com/mohsin-encora/TestIM_Integration#readme"
+}
